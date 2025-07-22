@@ -15,10 +15,10 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.test-docker.nu-dev.co.rule=Host(`test-docker.nu-dev.co`)"
-      - "traefik.http.routers.test-docker.nu-dev.co.entrypoints=websecure"
-      - "traefik.http.routers.test-docker.nu-dev.co.tls.certResolver=letsencrypt"
-      - "traefik.http.services.test-docker.nu-dev.co.loadbalancer.server.port=3000"
+      - "traefik.http.routers.test-docker.rule=Host(`test-docker.nu-dev.co`)"
+      - "traefik.http.routers.test-docker.entrypoints=websecure"
+      - "traefik.http.routers.test-docker.tls.certResolver=letsencrypt"
+      - "traefik.http.services.test-docker.loadbalancer.server.port=3000"
 networks:
   dokploy-network:
     external: true
